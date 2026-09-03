@@ -93,8 +93,8 @@ console.log(result.text);
 
 | Maintainer | Role | Contact |
 |---|---|---|
-| **Abdulmalik Ojo** (`@tecmalik`) | Lead Maintainer | [abdulmalikojo2@gmail.com](mailto:abdulmalikojo2@gmail.com) |
-
+| **Abdulmalik Ojo** (`@tecmalik`) |  Maintainer | [abdulmalikojo2@gmail.com](mailto:abdulmalikojo2@gmail.com) |
+| **Hikmah Oladele** (`@Hikmaholadele`) | Maintainer | [edit@gmail.com](mailto:edit@gmail.com) |
 ---
 
 ## License
