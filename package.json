@@ -1,0 +1,42 @@
+{
+  "name": "@stellar-agentkit/core",
+  "version": "0.1.0",
+  "description": "MCP server and AI SDK toolkit for autonomous Stellar agent interactions — payments, balances, SEP-1 TOML resolution, and SEP-24 anchor support.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "node --import tsx/esm --test src/__tests__/**/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "stellar",
+    "ai",
+    "mcp",
+    "agent",
+    "sdk",
+    "sep",
+    "horizon",
+    "blockchain"
+  ],
+  "author": "Abdulmalik Ojo <abdulmalikojo2@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AstroForgeLabs/stellar-agentkit.git"
+  },
+  "dependencies": {
+    "@stellar/stellar-sdk": "^12.3.0",
+    "zod": "^3.23.8",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.12",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.4"
+  }
+}
