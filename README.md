@@ -1,6 +1,6 @@
 # Stellar AgentKit
 
-[![CI](https://github.com/SmartCraftGroup/stellar-agentkit/actions/workflows/ci.yml/badge.svg)](https://github.com/SmartCraftGroup/stellar-agentkit/actions/workflows/ci.yml)
+[![CI](https://github.com/AstroForgeLabs/stellar-agentkit/actions/workflows/ci.yml/badge.svg)](https://github.com/AstroForgeLabs/stellar-agentkit/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-v5.0-blue.svg)](https://www.typescriptlang.org/)
 [![Drips Wave](https://img.shields.io/badge/Drips-Stellar%20Wave-blue.svg)](https://drips.network)
