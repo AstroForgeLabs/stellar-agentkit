@@ -11,9 +11,12 @@ import { sendPaymentTool } from './tools/send-payment.js';
 import { checkTrustlineTool } from './tools/check-trustline.js';
 import { resolveSep1Tool } from './tools/resolve-sep1.js';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type AnyTool = AgentTool<any, any>;
+
 export class StellarAgentKit {
   private config: AgentKitConfig;
-  private tools: Map<string, AgentTool>;
+  private tools: Map<string, AnyTool>;
 
   constructor(config: Partial<AgentKitConfig> & { network?: AgentKitConfig['network'] }) {
     this.config = {
@@ -22,11 +25,11 @@ export class StellarAgentKit {
       horizonUrl: config.horizonUrl,
     };
 
-    this.tools = new Map([
-      [getBalanceTool.name, getBalanceTool],
-      [sendPaymentTool.name, sendPaymentTool],
-      [checkTrustlineTool.name, checkTrustlineTool],
-      [resolveSep1Tool.name, resolveSep1Tool],
+    this.tools = new Map<string, AnyTool>([
+      [getBalanceTool.name, getBalanceTool as AnyTool],
+      [sendPaymentTool.name, sendPaymentTool as AnyTool],
+      [checkTrustlineTool.name, checkTrustlineTool as AnyTool],
+      [resolveSep1Tool.name, resolveSep1Tool as AnyTool],
     ]);
   }
 

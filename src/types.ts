@@ -20,7 +20,8 @@ export const NETWORK_PASSPHRASES: Record<StellarNetwork, string> = {
 export interface AgentTool<TInput = unknown, TOutput = unknown> {
   name: string;
   description: string;
-  inputSchema: z.ZodSchema<TInput>;
+  // ZodTypeAny avoids incompatibilities with ZodDefault, ZodOptional wrappers
+  inputSchema: z.ZodTypeAny;
   execute(input: TInput, config: AgentKitConfig): Promise<TOutput>;
 }
 
