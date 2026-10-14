@@ -87,6 +87,27 @@ console.log(result.text);
 | `STELLAR_NETWORK` | Required | Target network (`testnet` or `mainnet`) | `testnet` |
 | `HORIZON_RPC_URL` | Optional | Custom Horizon RPC endpoint URL | `https://horizon-testnet.stellar.org` |
 
+## Claude Desktop / Cursor MCP Server
+
+Build the package, then point your MCP client at the bundled stdio server:
+
+```json
+{
+  "mcpServers": {
+    "stellar": {
+      "command": "npx",
+      "args": ["-y", "--package", "@stellar-agentkit/core", "mcp-server"],
+      "env": {
+        "STELLAR_NETWORK": "testnet",
+        "STELLAR_SECRET_KEY": "S..."
+      }
+    }
+  }
+}
+```
+
+Omit `STELLAR_SECRET_KEY` when only read-only tools are needed.
+
 ---
 
 ## Maintainers & Contact
